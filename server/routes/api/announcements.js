@@ -1,6 +1,8 @@
 import express from 'express';
 import mongodb from 'mongodb';
 
+const MONGODB_URI = process.env.MONGODB_URI;
+
 const router = express.Router();
 
 // Get Announcements
@@ -15,20 +17,25 @@ router.get('/:do/:category', async (req, res) => {
         const announcements = await loadAnnouncementsCollection();
         res.send(await announcements.find( { $and: [ { isAccepted: {$eq: true} }, {category: 'cars'} ] } ).toArray());
 
-    }else if(req.params.do === 'accepted' && req.params.category === 'clothes') {
+    } else if(req.params.do === 'accepted' && req.params.category === 'clothes') {
         // get all accepted posts from category
         const announcements = await loadAnnouncementsCollection();
         res.send(await announcements.find( { $and: [ { isAccepted: {$eq: true} }, {category: 'clothes'} ] } ).toArray());
 
-    }else if(req.params.do === 'accepted' && req.params.category === 'houses') {
+    } else if(req.params.do === 'accepted' && req.params.category === 'houses') {
         // get all accepted posts from category
         const announcements = await loadAnnouncementsCollection();
         res.send(await announcements.find( { $and: [ { isAccepted: {$eq: true} }, {category: 'houses'} ] } ).toArray());
 
-    }else if(req.params.do === 'accepted' && req.params.category === 'services') {
+    } else if(req.params.do === 'accepted' && req.params.category === 'services') {
         // get all accepted posts from category
         const announcements = await loadAnnouncementsCollection();
         res.send(await announcements.find( { $and: [ { isAccepted: {$eq: true} }, {category: 'services'} ] } ).toArray());
+
+    } else if(req.params.do === 'accepted' && req.params.category === 'other') {
+        // get all accepted posts from category
+        const announcements = await loadAnnouncementsCollection();
+        res.send(await announcements.find( { $and: [ { isAccepted: {$eq: true} }, {category: 'other'} ] } ).toArray());
 
     } else if(req.params.do == 'notaccepted') {
 

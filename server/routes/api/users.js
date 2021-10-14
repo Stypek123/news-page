@@ -2,6 +2,8 @@ import express from 'express';
 import mongodb from 'mongodb';
 import bcrypt from 'bcrypt';
 
+const MONGODB_URI = process.env.MONGODB_URI;
+
 const router = express.Router();
 
 // Get users
@@ -11,32 +13,32 @@ router.get('/', async (req, res) => {
 });
 
 // Get user
-router.post('/login', async (req, res) => {
-    const users = await loadUsersCollection();
-    const user = users.find(user => user.username === req.body.username)
-    // console.log(user);
-    if(user == null) {
-        return res.status(400).send('Nie można odnaleźć takiego użytkownika')
-    }
+// router.post('/login', async (req, res) => {
+//     const users = await loadUsersCollection();
+//     const user = users.find(user => user.username === req.body.username)
+//     // console.log(user);
+//     if(user == null) {
+//         return res.status(400).send('Nie można odnaleźć takiego użytkownika')
+//     }
 
-    try {
-        if(await bcrypt.compare(req.body.password, user.password)) {
-            res.send('Success');
-            console.log('udało się');
-        } else {
-            res.send('Not allowed');
-            console.log('nie udało się');
-        }
-    } catch {
-        res.status(500).send();
-    }
-    res.send(await users.find({  username: req.body.username, password: req.body.password} ).toArray());
+//     try {
+//         if(await bcrypt.compare(req.body.password, user.password)) {
+//             res.send('Success');
+//             console.log('udało się');
+//         } else {
+//             res.send('Not allowed');
+//             console.log('nie udało się');
+//         }
+//     } catch {
+//         res.status(500).send();
+//     }
+//     res.send(await users.find({  username: req.body.username, password: req.body.password} ).toArray());
     
-});
+// });
 
 // Add user
 router.post('/:do', async (req, res) => {
-    if(req.params.do == 'register') {
+    if(req.params.do === 'register') {
         try {
             // const salt = await bcrypt.genSalt()
             const hashedPassword = await bcrypt.hash(req.body.password, 10)
@@ -52,10 +54,10 @@ router.post('/:do', async (req, res) => {
         } catch {
             res.status(500).send()
         }
-    } else if (req.params.do == 'login') {
+    } else if (req.params.do === 'login') {
         const users = await loadUsersCollection();
-        const user = users.find(user => user.username === req.body.username)
-    // console.log(user);
+        const user = users.find( user => user.username === req.body.username )
+        console.log(user);
         if(user == null) {
             return res.status(400).send('Nie można odnaleźć takiego użytkownika')
         }
@@ -69,6 +71,7 @@ router.post('/:do', async (req, res) => {
                 console.log('nie udało się');
             }
         } catch {
+            console.log(req.body.username);
             res.status(500).send();
         }
     }
