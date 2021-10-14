@@ -226,19 +226,6 @@
       },
       {
         "source": {
-          "id": "google-news",
-          "name": "Google News"
-        },
-        "author": null,
-        "title": "Ostatnia droga byłego bramkarza m.in. małopolskich klubów, w tym Cracovii, Jacka Felscha [ZDJĘCIA] - Gazeta Krakowska",
-        "description": null,
-        "url": "https://news.google.com/__i/rss/rd/articles/CBMihgFodHRwczovL2dhemV0YWtyYWtvd3NrYS5wbC9vc3RhdG5pYS1kcm9nYS1ieWxlZ28tYnJhbWthcnphLW1pbi1tYWxvcG9sc2tpY2gta2x1Ym93LXctdHltLWNyYWNvdmlpLWphY2thLWZlbHNjaGEtemRqZWNpYS9hci9jMi0xNTg0MzUxN9IBAA?oc=5",
-        "urlToImage": null,
-        "publishedAt": "2021-10-09T08:26:00Z",
-        "content": null
-      },
-      {
-        "source": {
           "id": null,
           "name": "Meczyki.pl"
         },

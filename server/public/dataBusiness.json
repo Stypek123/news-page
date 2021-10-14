@@ -70,19 +70,6 @@
       },
       {
         "source": {
-          "id": "google-news",
-          "name": "Google News"
-        },
-        "author": null,
-        "title": "Pierwszy autobus napędzany wodorem opuścił fabrykę w Sanoku [ZDJĘCIA] - Nowiny24",
-        "description": null,
-        "url": "https://news.google.com/__i/rss/rd/articles/CBMiZmh0dHBzOi8vbm93aW55MjQucGwvcGllcndzenktYXV0b2J1cy1uYXBlZHphbnktd29kb3JlbS1vcHVzY2lsLWZhYnJ5a2Utdy1zYW5va3UtemRqZWNpYS9hci9jMS0xNTg0NDAwNdIBAA?oc=5",
-        "urlToImage": null,
-        "publishedAt": "2021-10-09T10:05:03Z",
-        "content": null
-      },
-      {
-        "source": {
           "id": null,
           "name": "Money.pl"
         },
@@ -213,19 +200,6 @@
       },
       {
         "source": {
-          "id": "google-news",
-          "name": "Google News"
-        },
-        "author": null,
-        "title": "Emerytura Plus - takie pieniądze mają trafić do emerytów. Oto wyliczenia czternastych emerytur [9.10.21 r.] - Gazeta Pomorska",
-        "description": null,
-        "url": "https://news.google.com/__i/rss/rd/articles/CBMihgFodHRwczovL3BvbW9yc2thLnBsL2VtZXJ5dHVyYS1wbHVzLXRha2llLXBpZW5pYWR6ZS1tYWphLXRyYWZpYy1kby1lbWVyeXRvdy1vdG8td3lsaWN6ZW5pYS1jenRlcm5hc3R5Y2gtZW1lcnl0dXItOTEwMjEtci9hci9jMy0xNTg0MTQ4OdIBAA?oc=5",
-        "urlToImage": null,
-        "publishedAt": "2021-10-09T06:00:00Z",
-        "content": null
-      },
-      {
-        "source": {
           "id": null,
           "name": "Ddwloclawek.pl"
         },
@@ -249,19 +223,6 @@
         "urlToImage": "https://d-art.ppstatic.pl/kadry/k/r/1/fc/96/61548947d7387_o_original.jpg",
         "publishedAt": "2021-10-09T06:00:00Z",
         "content": "\"Polski ad\" to program Prawa i Sprawiedliwoci, który partia chce realizowa po pandemii koronawirusa. Ma si w nim znale wiele propozycji dla obywateli. Znamy ju pierwsze szczegóy programów.\r\nW ramach … [+672 chars]"
-      },
-      {
-        "source": {
-          "id": null,
-          "name": "Wyborcza.pl"
-        },
-        "author": null,
-        "title": "Warszawa wstrzymuje deweloperom na Pradze wydawanie \"wuzetek\". Gdzie dokładnie? - Warszawa.Wyborcza.pl",
-        "description": null,
-        "url": "https://warszawa.wyborcza.pl/warszawa/7,54420,27665371,rewitalizacja-pragi-ratusz-wstrzymuje-na-dwa-lata-wydawanie.html?disableRedirects=true",
-        "urlToImage": null,
-        "publishedAt": "2021-10-09T05:11:03Z",
-        "content": null
       }
     ]
   }
