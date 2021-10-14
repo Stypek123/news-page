@@ -2,3 +2,6 @@
   # Directory with the serverless Lambda functions
   functions = "functions"
 
+[[redirectes]]
+    from = "/api"
+    to = "/.netlify/functions/:splat"
