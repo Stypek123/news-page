@@ -1,7 +1,3 @@
-[build]
-  # Directory with the serverless Lambda functions
-  functions = "lambda_functions"
-
 // ./lambda_functions/what_is_the_time.js
 
 // This `handler` is what is called when your Lambda
@@ -10,9 +6,9 @@
 
 
 module.exports.handler = async (event, context) => {
-  const unixTime = Math.floor(Date.now() / 1000);
-  return {
-    statusCode: 200,
-    body: `The Unix time is ${unixTime}`,
+    const unixTime = Math.floor(Date.now() / 1000);
+    return {
+      statusCode: 200,
+      body: `The Unix time is ${unixTime}`,
+    };
   };
-};
